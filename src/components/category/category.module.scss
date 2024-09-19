@@ -1,0 +1,86 @@
+@import '../../styles/variables';
+
+.categoryTitle {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+  .categoryTrackContainer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-right: 20px;
+    background: $color-background-2;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 0 12px 0 white inset;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+      padding: 10px;
+      overflow: hidden;
+      gap: 10px;
+      align-items: initial
+    }
+
+    &:last-of-type {
+      margin-bottom: 170px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 12px 0 $color-6 inset;
+      transform: scale(1.005);
+    }
+
+    .categoryTrackImg {
+      width: 200px;
+      height: 200px;
+      background: black;
+      border-radius: 20px 0 0 20px;
+      position: relative;
+      z-index: 1;
+
+      @media (max-width: 500px) {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        object-fit: cover;
+      }
+
+    }
+
+    .categoryTrackDesc {
+
+
+      .categoryTrackArtist {
+        font-size: 14px;
+      }
+
+      .categoryTrackName {
+        font-size: 30px;
+
+        @media (max-width: 500px) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .categoryButtons {
+      margin-left: auto;
+
+      button {
+        color: #fff;
+        border: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+        transition: filter 0.3s ease;
+
+        &:hover {
+          filter: drop-shadow(0 0 5px rgba(96, 172, 249, 0.84));
+        }
+      }
+    }
+  }

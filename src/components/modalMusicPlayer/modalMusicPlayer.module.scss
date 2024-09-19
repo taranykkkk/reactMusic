@@ -1,0 +1,87 @@
+@import '../../styles/variables';
+
+  .modalMusicPlayerWrapper {
+    position: fixed;
+    top: 80px;
+    right: 50px;
+    background-color: black;
+    width: 300px;
+    box-shadow: 1px 1px 20px 0 $color-6;
+    border-radius: 10px;
+    padding: 15px;
+    z-index: 50;
+
+    .modalMusicPlayerContainer {
+      display: flex;
+      flex-direction: column;
+
+      .modalMusicPlayerDescContainer {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .modalMusicPlayerImg {
+          background-color: transparent;
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .modalMusicPlayerTextContainer {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+
+          .modalMusicPlayerText {
+            white-space: nowrap;
+            width: 100%;
+            max-width: 200px;
+          }
+        }
+      }
+
+      .modalMusicPlayerControl {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        button {
+            border: none;
+            background: none;
+            padding: 0;
+            margin: 0;
+            transition: transform 0.3s ease;
+            color: #FFFFFF;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+        }
+      }
+    }
+  }
+
+.fatalMessage {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.animation {
+  animation: slide 15s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(calc(-100% + 150px));
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

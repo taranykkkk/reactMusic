@@ -1,0 +1,88 @@
+@import "../../styles/variables";
+
+.recommendedContainer {
+  min-height: 351px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    background-color: #1E1E1E;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: fit-content;
+    margin-bottom: 30px;
+  }
+
+  .recommendedTrackList {
+    list-style: none;
+    max-height: 290px;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #FFFFFF;
+    }
+
+    .recommendedListItem {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      background-color: #1E1E1E;
+      padding: 5px;
+
+      .recommendedTrackImage {
+        width: 44px;
+        height: 44px;
+        object-fit: cover;
+      }
+
+      span {
+        font-size: 14px;
+        white-space: nowrap;
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .recommendedArtists {
+        max-width: 50px;
+      }
+
+      .recommendedTrackName {
+        max-width: 95px;
+      }
+
+      .recommendedListControl {
+        margin-left: auto;
+        display: flex;
+        gap: 10px;
+
+        button {
+          border: none;
+          background: none;
+          padding: 0;
+          margin: 0;
+          transition: transform 0.3s ease;
+          color: #FFFFFF;
+
+          &:hover {
+            transform: scale(1.3);
+          }
+        }
+      }
+    }
+  }
+}

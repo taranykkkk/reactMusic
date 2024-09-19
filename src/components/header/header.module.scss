@@ -1,0 +1,71 @@
+@import '../../styles/variables';
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
+  .userWrapper {
+    width: 33.3%;
+
+    .userContainer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      width: fit-content;
+
+      .userImage {
+        width: 30px;
+        height: 30px;
+        background-color: $color-6;
+        border-radius: 100%;
+        border: 1px solid blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .userGreetingsText {
+        font-size: 14px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+
+        span {
+          color: grey;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+
+  .exitBtnContainer {
+    width: 33.3%;
+    display: flex;
+    justify-content: flex-end;
+
+    .exitBtn {
+      color: $color-6;
+      border: none;
+      background: none;
+      padding: 0;
+      margin:0;
+      transition: filter 0.3s ease;
+
+      &:hover {
+        filter: drop-shadow(0px 0px 5px rgba(96, 172, 249, 0.84));
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .userGreetingsText {
+    display: none !important;
+  }
+}

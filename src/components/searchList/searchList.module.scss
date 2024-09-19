@@ -1,0 +1,160 @@
+@import "../../styles/variables";
+
+.searchListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .searchListItem {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 60px;
+
+    .searchListCategory {
+      font-size: 40px;
+    }
+
+    .artists {
+      padding: 10px;
+      border-radius: 5px;
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      transition: background-color 0.3s ease;
+      outline: none;
+      position: relative;
+
+      &:hover {
+        background-color: black;
+      }
+
+      .img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: black;
+      }
+
+      .isPlaying {
+        width: 50px;
+        height: 50px;
+        background: $color-6;
+        position: absolute;
+        bottom: 50px;
+        right: 10px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 20px 3px #61adfbd9;
+
+        .visualizerContainer {
+          position: relative;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+
+    .playlists {
+      padding: 10px;
+      border-radius: 5px;
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      transition: background-color 0.3s ease;
+      outline: none;
+
+
+      &:hover {
+        background-color: black;
+      }
+
+      .img {
+        width: 200px;
+        height: 200px;
+        background-color: #00C2CB;
+        object-fit: cover;
+      }
+
+      .name {
+        white-space: nowrap;
+        max-width: 190px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .tracks {
+      padding: 10px;
+      border-radius: 5px;
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      transition: background-color 0.3s ease;
+      outline: none;
+
+      &:hover {
+        background-color: black;
+      }
+
+      .img {
+        width: 200px;
+        height: 200px;
+        background-color: #00C2CB;
+        object-fit: cover;
+      }
+
+      .name {
+        white-space: nowrap;
+        max-width: 190px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+.customNextArrow {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-70%);
+  transition: color .2s ease;
+
+  &:before {
+    content: '\1405';
+    font-size: 60px;
+  }
+
+  &:hover {
+    color: #00C2CB;
+  }
+}
+
+.customPrevArrow {
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-70%);
+  transition: color .2s ease;
+
+  &:before {
+    content: '\140A';
+    font-size: 60px;
+  }
+
+  &:hover {
+    color: #00C2CB;
+  }
+}
+
+.disabledArrow {
+  color: #8A9A9D;
+
+  &:hover {
+    color: #44494a;
+  }
+}

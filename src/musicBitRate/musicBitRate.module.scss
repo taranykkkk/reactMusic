@@ -1,0 +1,57 @@
+@import '../styles/variables';
+
+.audioWaveformContainer {
+  position: relative;
+  max-width: 700px;
+}
+
+.waveformCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+.playPauseButton {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $color-5;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #253639;
+  }
+}
+
+.timeTrack {
+  position: absolute;
+  top: 80px;
+  background-color: #1E1E1E;
+  padding: 1px 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.topMixesTrackDesc {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+
+  span {
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-5;
+  }
+}

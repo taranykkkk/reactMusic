@@ -1,0 +1,214 @@
+@import "../../styles/variables";
+
+.musicPlayerContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100vw;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 20px 0 0 20px;
+
+  @media (max-width: 768px) {
+    padding: 10px 10px 10px 0;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .playNow {
+    animation: playBeat 1s infinite;
+  }
+
+  .musicPlayerTrackDesc {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+    width: 30%;
+    box-shadow: 0px -1px 8px 0px $color-6;
+
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+
+    .musicPlayerTrackImg {
+      min-width: 70px;
+      height: 70px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .musicPlayerTrackDescText {
+      color: black;
+      font-weight: bold;
+
+      .musicPlayerTrackName {
+        font-size: 16px;
+      }
+
+      .musicPlayerTrackArtist {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .musicPlayerControl {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+
+    .musicPlayerControlBtns {
+      display: flex;
+      gap: 30px;
+
+      button {
+        border: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.3);
+        }
+      }
+    }
+
+    .musicIsLiked {
+      position: absolute;
+      color: #61ADFB;
+      border: none;
+      background: none;
+      padding: 0;
+      margin: 0;
+      transition: filter 0.3s ease;
+      cursor: pointer;
+      top: -35px;
+      right: 5px;
+
+      @media (max-width: 768px) {
+        right: 0;
+      }
+
+      &:hover {
+        filter: drop-shadow(0px 0px 5px rgb(96, 172, 249));
+      }
+    }
+
+    .musicPlayerControlRewindContainer {
+      position: relative;
+      width: 50%;
+
+      @media (max-width: 768px) {
+        width: 90%;
+      }
+
+      .musicTime {
+        position: absolute;
+        color: #1E1E1E;
+        top: -15px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+
+
+      .musicPlayerControlRewind {
+        width: 100%;
+        -webkit-appearance: none;
+        appearance: none;
+        height: $track-height;
+        background: transparent;
+        border-radius: $border-radius;
+        outline: none;
+
+        &::-webkit-slider-runnable-track {
+          width: 100%;
+          height: $track-height;
+          background: $track-color;
+          border-radius: $border-radius;
+          position: relative;
+        }
+
+        &::-moz-range-track {
+          width: 100%;
+          height: $track-height;
+          background: $track-color;
+          border-radius: $border-radius;
+          position: relative;
+        }
+
+        &::-ms-track {
+          width: 100%;
+          height: $track-height;
+          background: $track-color;
+          border-radius: $border-radius;
+          position: relative;
+          background-clip: padding-box;
+          border: transparent;
+        }
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: $thumb-size;
+          height: $thumb-size;
+          background: $thumb-color;
+          border-radius: 50%;
+          cursor: pointer;
+          box-shadow: $thumb-shadow;
+          position: relative;
+          top: calc(($track-height - $thumb-size) / 2);
+        }
+
+        &::-moz-range-thumb {
+          width: $thumb-size;
+          height: $thumb-size;
+          background: $thumb-color;
+          border-radius: 50%;
+          cursor: pointer;
+          box-shadow: $thumb-shadow;
+        }
+
+        &::-ms-thumb {
+          width: $thumb-size;
+          height: $thumb-size;
+          background: $thumb-color;
+          border-radius: 50%;
+          cursor: pointer;
+          box-shadow: $thumb-shadow;
+        }
+      }
+    }
+  }
+}
+
+@keyframes playBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(1.03);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(1.03);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}

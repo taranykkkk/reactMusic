@@ -1,0 +1,133 @@
+@import '../../styles/variables';
+
+$scrollbar-thumb-bg: #0089ff;
+
+.topMixesPreviewContainer {
+  background-color: $color-6;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  position: relative;
+
+  .topMixesPreviewDesc {
+
+    .topMixesPreviewName {
+      font-size: 40px;
+      max-width: clamp(45.313rem, -24.75rem + 98.33vw, 63.75rem); // 1140px 1440px
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .topMixesPreviewOwner {
+      font-size: 25px;
+      font-weight: 500;
+    }
+  }
+
+  .topMixesPreviewImageContainer {
+    position: absolute;
+    right: 0;
+    background: $color-6;
+    display: flex;
+    justify-content: center;
+    padding: 0 30px 30px 30px;
+    flex-direction: column;
+    gap: 50px;
+
+    .topMixesPreviewImage {
+      width: 300px;
+      height: 300px;
+    }
+
+  }
+}
+
+.topMixesTracksList {
+  max-width: clamp(45.625rem, -25.625rem + 100vw, 64.375rem); // 1140px 1440px
+  width: 100%;
+  margin: 0 15px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-left: 2px solid #61ADFB;
+  padding: 5px 20px;
+  max-height: 515px;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $color-6;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color-background-2;
+  }
+
+  .topMixesTrackCard {
+    background: #000000;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: $color-6;
+
+    .topMixesTrackImage {
+      width: 44px;
+      height: 44px;
+      background-color: #8A9A9D;
+    }
+
+    .topMixesTrackDesc {
+      display: flex;
+      align-items: center;
+
+      .topMixesTrackNumber {
+        margin-right: 10px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .topMixesTrackArtist {
+        white-space: nowrap;
+        margin-right: 20px;
+        max-width: 160px;
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .topMixesTrackName {
+        font-weight: bold;
+      }
+    }
+
+    .topMixesTrackControl {
+      margin-left: auto;
+      display: flex;
+      gap: 20px;
+
+      button {
+        color: #fff;
+        border: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+        transition: filter 0.3s ease;
+
+        &:hover {
+          filter: drop-shadow(0 0 5px rgba(96, 172, 249, 0.84));
+        }
+      }
+    }
+  }
+}
+
+.isPlaying {
+  box-shadow: inset 1px 0 7px 0 white;
+}

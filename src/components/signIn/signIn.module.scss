@@ -1,0 +1,148 @@
+@import '../../styles/variables';
+
+.signInContainer {
+  padding: 30px;
+  background: $color-2;
+  max-width: 900px;
+  border-radius: 20px;
+  box-shadow: 4px 9px 20px 11px #44d7dd52;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  .signInTitle {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $color-text-1
+  }
+
+  .signInSocialBtn {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+
+    li {
+      border: 0.20px solid #000000;
+      border-radius: 10px;
+      width: 377px;
+      height: 59px;
+      background: $color-background-2;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.10;
+      letter-spacing: 0.04em;
+      text-align: center;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        transform: rotateZ(2deg);
+        color: $color-2;
+      }
+    }
+  }
+
+  .signInVariables {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+
+    span {
+      display: block;
+      border-top: 1px solid black;
+      width: 150px;
+    }
+  }
+
+  .signInSuccess {
+    border: none;
+    border-radius: 50px;
+    width: 377px;
+    height: 59px;
+    box-shadow: 0 0 10px 0px #39c0d4;
+    background: #06a0b5;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.10;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: $color-text-1;
+    transition: all 0.2s ease;
+
+    &:hover {
+      animation: button-hover 2s ease-in infinite;
+      color: $color-2;
+    }
+  }
+
+  .account {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 110%;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: $color-text-1;
+    text-shadow: 0 2px 20px #06a0b5;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 700;
+      color: #7ceeff;
+
+      &:hover {
+        animation: bounce 1s;
+      }
+    }
+  }
+}
+
+@keyframes button-hover {
+  from {
+    transform: rotateX(6deg) rotateY(-6deg);
+  }
+  to {
+    transform: rotateX(-6deg) rotateY(6deg);
+  }
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0) scaleY(1.1);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -7px, 0) scaleY(1.05);
+  }
+
+  80% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0) scaleY(0.95);
+  }
+
+  90% {
+    transform: translate3d(0, -4px, 0) scaleY(1.02);
+  }
+}

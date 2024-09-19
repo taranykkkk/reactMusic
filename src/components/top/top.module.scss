@@ -1,0 +1,66 @@
+@import '../../styles/variables';
+
+  .topTitle {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .topSliderContainer {
+    position: relative;
+
+    .topSliderCardContainer {
+      position: relative;
+      box-sizing: border-box;
+      overflow: hidden;
+      border-radius: 10px;
+      cursor: pointer;
+
+      .img {
+        width: 100%;
+        height: 300px;
+        max-width: 300px;
+        min-width: 300px;
+      }
+
+      .description {
+        font-size: 16px;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        left: 40px;
+        background: rgba($color-background-2, 0.8);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        padding: 5px;
+        max-width: 230px;
+        border-radius: 10px;
+      }
+
+      .circle {
+        position: absolute;
+        background-color: $color-2;
+        opacity: 0.4;
+        border-radius: 50%;
+
+        &:first-of-type {
+          height: 50px;
+          width: 50px;
+          top: 0;
+          left: -20px;
+        }
+
+        &:nth-of-type(2) {
+          height: 150px;
+          width: 150px;
+          bottom: 20px;
+          right: -60px;
+        }
+      }
+    }
+  }
+
+@media (max-width: 500px) {
+  .topTitle {
+    font-size: 30px;
+  }
+}

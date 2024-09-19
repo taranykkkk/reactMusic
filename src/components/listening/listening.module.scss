@@ -1,0 +1,52 @@
+  .listeningTitle {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .listeningContainerCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+
+    .listeningCardContainer {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding-right: 20px;
+      backdrop-filter: blur(4px);
+      background: rgba(67, 99, 105, 0.2);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.04);
+      }
+
+      .listeningCardImg {
+        width: 100px;
+        height: 100px;
+        border-radius: 6px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .listeningCardDesc {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+
+
+@media (max-width: 500px) {
+  .listeningTitle {
+    font-size: 30px;
+  }
+
+  .listeningContainerCards {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
